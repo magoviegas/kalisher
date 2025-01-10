@@ -1,0 +1,31 @@
+/* Container da seção Sobre */
+.politica {
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Títulos */
+.politica h2 {
+    text-align: center;
+    font-size: 2em;
+    color: aqua;
+    margin-bottom: 15px;
+}
+
+.politica p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    color: #9340ff;
+    text-align: justify;
+}
+
+/* Espaçamento nas laterais */
+@media (max-width: 768px) {
+    .politica {
+        width: 90%;
+    }
+}

@@ -1,0 +1,511 @@
+/* Reset de margens, preenchimento e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definição do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #101728; /* Cor de fundo da página */
+}
+
+/* Estilos para a navegação */
+nav {
+    background-color: #101728;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo a {
+    display: block;
+    width: 200px;  /* Largura da logo */
+    height: auto;  /* Mantém a proporção da altura */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    padding: 1rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.nav-links .contact-button {
+    background-color: #1D9D63;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links .contact-button:hover {
+    background-color: #4CAF50;
+}
+
+/* Menu hambúrguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #101728;
+        z-index: 1;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .nav-links li a {
+        width: 100%;
+        display: block;
+    }
+}
+
+.div-slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slides-front {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Suave transição */
+    will-change: transform; /* Melhora performance */
+}
+
+.slide-container {
+    display: block;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.slide-container img {
+    width: 100%; /* Faz com que a imagem ocupe 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção da altura */
+    display: block; /* Remove qualquer espaço em branco ao redor da imagem */
+}
+
+
+.nav-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #888;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-dot:hover {
+    background-color: #1D9D63;
+}
+
+
+/* Bloco de conteúdo com texto e imagem */
+.content-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+/* Texto à esquerda */
+.text-section {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.text-section h2 {
+    font-size: 2rem;
+    background: linear-gradient(to right, #9340ff, aqua);
+    background-clip: text; /* Para navegadores modernos */
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.text-section p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Imagem à direita */
+.image-section {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 50%; /* Limita o tamanho da imagem */
+    height: auto;
+    z-index: 2;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+}
+
+/* Efeito circular de fundo */
+.circular-effect {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #9340ff, aqua);
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(100px);
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .content-block {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-section {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .text-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-section p {
+        font-size: 0.9rem;
+    }
+
+    .image-section {
+        margin-top: 1rem;
+    }
+
+    .image-section img {
+        max-width: 60%; /* Reduz tamanho em dispositivos menores */
+    }
+
+    .circular-effect {
+        width: 200px;
+        height: 200px;
+        filter: blur(50px); /* Ajuste no efeito */
+    }
+}
+
+
+
+/*
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .content-block {
+        flex-direction: column; /* Coluna para mobile */
+        text-align: center;
+    }
+
+    .text-section {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .text-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-section p {
+        font-size: 0.9rem;
+    }
+
+    .image-section {
+        margin-top: 1rem;
+    }
+
+    .circular-effect {
+        width: 200px;
+        height: 200px;
+        filter: blur(50px); /* Reduz o efeito para dispositivos menores */
+    }
+}
+
+
+/* Estilos para as seções de conteúdo */
+.referencia {
+    text-align: center;
+    padding: 2rem;
+    background-color: #101728;
+}
+
+.referenciatexto h3, .parceiros h3{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #9340ff;
+}
+
+.referenciatexto h4 {
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.galeria {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite a quebra de linha para imagens */
+    padding-top: 1rem;
+    gap: 1rem; /* Adicionado para garantir espaçamento adequado entre os itens */
+}
+
+.galeria-item {
+    width: 23%; /* Ajuste para as 4 imagens se ajustarem corretamente */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.galeria-item img {
+    width: 100%; /* A imagem ocupa toda a largura do contêiner */
+    height: auto; /* Mantém a proporção original */
+    display: block; /* Remove possíveis espaçamentos indesejados */
+    max-width: 100%; /* Garante que não ultrapasse os limites do contêiner */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
+    border-radius: 8px; /* Para um acabamento mais elegante */
+}
+
+
+/* Estilo para destacar a 4ª imagem */
+.galeria-item:nth-child(4) img {
+    /*border: 2px solid red;  Destaque na borda */
+    border-radius: 8px;
+}
+
+.galeria-item h3 {
+    color: aqua;
+    margin-top: 1rem;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+}
+
+/* Estilos para os parceiros */
+.parceiros {
+    text-align: center;
+    padding: 2rem;
+    background-color: #101728;
+    color: #fff;
+}
+
+/* Botão com degradê */
+.gradient-button {
+    background: linear-gradient(to right, #9340ff, aqua);
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s, background 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+/* Efeito ao passar o mouse */
+.gradient-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Botão responsivo */
+@media (max-width: 768px) {
+    .gradient-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Estilos do footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #101728;
+    color: #fff;
+}
+
+.footer-logo a {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-top: 10px;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.footer-links li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.footer-instagram a, .footer-whatsapp a {
+    font-size: 2rem;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+/* Estilo para as imagens do Instagram e WhatsApp */
+.footer-instagram img,
+.footer-whatsapp img {
+    max-width: 50px; /* Largura máxima para as imagens */
+    height: auto;    /* Mantém a proporção */
+    display: block;  /* Garante alinhamento adequado */
+    margin: 0 auto;  /* Centraliza dentro do container */
+    transition: transform 0.3s ease; /* Efeito ao passar o mouse */
+}
+
+.footer-instagram img:hover,
+.footer-whatsapp img:hover {
+    transform: scale(1.1); /* Aumenta levemente o tamanho ao passar o mouse */
+}
+
+/* Responsividade para imagens menores em dispositivos móveis */
+@media (max-width: 768px) {
+    .footer-instagram img,
+    .footer-whatsapp img {
+        max-width: 40px; /* Ajusta o tamanho em telas pequenas */
+    }
+}
+
+
+.footer-contact p {
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .galeria {
+        flex-direction: column;
+    }
+
+    .galeria-item {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .footer-logo, .footer-links, .footer-instagram, .footer-whatsapp {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Estilos do fundo com luz */
+.fundo-luz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #101728;
+    overflow: hidden;
+    z-index: -1;  /* Para ficar atrás do conteúdo */
+}
+
+/* Triângulo com gradiente e animação de luz */
+.triangulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    border-bottom: 300px solid rgba(255, 0, 0, 0.2); /* Triângulo com luz vermelha */
+    animation: luz 3s infinite alternate;
+    transform: translate(-50%, -50%);
+}
+
+/* Animação de luz no triângulo */
+@keyframes luz {
+    0% {
+        border-bottom-color: rgba(255, 0, 0, 0.1);
+    }
+    50% {
+        border-bottom-color: rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        border-bottom-color: rgba(255, 0, 0, 0.1);
+    }
+}

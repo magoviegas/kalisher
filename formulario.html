@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Style CSS/main.css">
+  <link rel="stylesheet" href="/Style CSS/form.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Kalisher Brasil</title>
+</head>
+
+<body style="background-color: #101728;">
+  <!-- Navegação -->
+  <nav>
+    <div class="logo">
+        <a href="/index.html"><img src="/src/imgcomprimidas/logosite.png" alt=""></a>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="/index.html">Início</a></li>
+        <li><a href="/index.html#servicos">Serviços</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+        <li><a href="/formulario.html" class="contact-button">Contato</a></li>
+    </ul>
+</nav>
+
+<div class="back">
+  <section class="contato">
+    <div class="contato-content">
+       
+        <div class="container">
+            <h4>Formulário de Contato</h4>
+            <form action="https://formsubmit.co/matheusviegassouza4297@gmail.com" method="POST">
+              <label for="email">Email: <br></label>
+              <input type="text" id="email" name="email" required>
+              <input type="hidden" name="_cc" value="marciovicky@kalisher.com.br,comercial@kalisher.com.br">
+              <input type="hidden" name="_subject" value="Cliente vindo do Site! ">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="text" name="_honey" style="display:none">
+              <form action="https://formsubmit.co/your-random-string" method="POST" >
+              <input type="hidden" name="_template" value="table">
+              <br>
+
+              <label for="whatsapp">Whatsapp: <br></label>
+              <input type="text" id="whatsapp" name="phone" required>
+
+              <br>
+        
+              <label for="mensagem">Mensagem: <br></label>
+              <textarea id="mensagem" name="message" rows="4" cols="50" required></textarea>
+
+              <br>
+
+              <label>
+                <input type="checkbox" id="aceitar" required>
+                Ao clicar você compartilha seu endereço de email e telefone para entrarmos em contato.
+              </label>
+        
+              <input type="submit" value="Enviar">
+
+              <input type="hidden" name="accessKey" value="9a751541-90cb-4276-8693-a4504e551a48">
+
+              <input type="hidden" name="_next" value="http://127.0.0.1:5500/sucessoEmail.html">
+            </form>
+          </div>
+   
+</section>
+</div>
+
+<!-- Rodapé -->
+<footer class="footer">
+  <div class="footer-logo">
+      <a href="/index.html"><img src="/src/imgcomprimidas/logosite.png" alt=""></a>
+  </div>
+  <div class="footer-links">
+      <ul>
+          <li><a href="/sobre.html">Sobre</a></li>
+          <li><a href="/politicaeprivacidade.html">Política de Privacidade</a></li>
+      </ul>
+  </div>
+  <div class="footer-instagram">
+      <a href="https://www.instagram.com/kalisherbrasil/" class="instagram"><img src="/src/imgcomprimidas/instagram.png" alt=""></a>
+  </div>
+  <div class="footer-whatsapp">
+      <a href="https://wa.me/123456789" class="whatsapp"><img src="/src/imgcomprimidas/whatsapp.png" alt=""></a>
+  </div>
+  <div class="footer-contact">
+      <p>Contato: comercial@kalisher.com.br</p>
+  </div>
+</footer>
+
+  
+  
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+</body>
+  </html>
