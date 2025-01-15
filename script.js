@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentSlide);
     setInterval(() => {
         showSlide(currentSlide + 1);
-    }, 3000); // Muda de slide a cada 3 segundos
+    }, 5000); // Muda de slide a cada 5 segundos
 
     // Script para o menu hambúrguer
     const menuToggle = document.getElementById("menu-toggle");
